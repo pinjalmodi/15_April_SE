@@ -1,12 +1,15 @@
 #include<stdio.h>
 int main(){
-	int n;
-	int x,r,sum=0,y;
-	printf("Enter number");
+	int n,i,x,y=0;
+	printf("Enter a num");
 	scanf("%d",&n);
-	for(x=n;x!=0;x=x/10){
-		r=x%10;
-		sum=sum*10 + r;
-}
- 	printf("%d",sum);
+	x=n;
+	do{
+	i=n%10;
+	y=y*10+i;
+	n=n/10;
+	}
+	while(n>0);	
+	printf("Rev is %d",y);
+	
 }
